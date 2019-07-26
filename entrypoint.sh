@@ -9,7 +9,12 @@ else
     exit 1
 fi
 
-sleep 30
+sleep 10
+
+if [[ "$INT_SECONDS" == "" ]]; then
+	echo "Please specify a valid -e INT_SECONDS command"
+    	exit 1
+fi
 
 echo "Initializing sync loop..."
 if [ -d /upload ]; then
